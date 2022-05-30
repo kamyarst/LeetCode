@@ -8,6 +8,34 @@
 import XCTest
 
 class FibonacciNumberTests: XCTestCase {
+
+    func test_leetCodeExample1() {
+        let n = 2
+        let sut = self.makeSUT()
+
+        let result = sut.fib(n)
+
+        XCTAssertEqual(result, 1)
+    }
+
+    func test_leetCodeExample2() {
+        let n = 3
+        let sut = self.makeSUT()
+
+        let result = sut.fib(n)
+
+        XCTAssertEqual(result, 2)
+    }
+
+    func test_leetCodeExample3() {
+        let n = 4
+        let sut = self.makeSUT()
+
+        let result = sut.fib(n)
+
+        XCTAssertEqual(result, 3)
+    }
+
     func test_minimumInputSuccess() {
         let n = 0
         let sut = self.makeSUT()
@@ -32,7 +60,7 @@ class FibonacciNumberTests: XCTestCase {
 
         let result = sut.fib(n)
 
-        XCTAssertNil(result)
+        XCTAssertEqual(result, -1)
     }
 
     func test_maximumInputFailure() {
@@ -41,7 +69,7 @@ class FibonacciNumberTests: XCTestCase {
 
         let result = sut.fib(n)
 
-        XCTAssertNil(result)
+        XCTAssertEqual(result, -1)
     }
 
     // MARK: - Helpers
@@ -52,9 +80,9 @@ class FibonacciNumberTests: XCTestCase {
 }
 
 struct FibonacciNumber {
-    func fib(_ n: Int) -> Int? {
-        guard n >= 0, n <= 30 else { return nil }
+    func fib(_ n: Int) -> Int {
         guard ![0, 1].contains(n) else { return n }
-        return -1
+        guard n > 1, n <= 30 else { return -1 }
+        return self.fib(n - 1) + self.fib(n - 2)
     }
 }
