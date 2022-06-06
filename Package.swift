@@ -15,7 +15,8 @@ let package = Package(
     targets: [
         .target(
             name: "LeetCode",
-            dependencies: []),
+            dependencies: [],
+            path: "Sources"),
         .testTarget(
             name: "Dynamic Programming",
             dependencies: ["LeetCode"]),
