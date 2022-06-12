@@ -8,7 +8,7 @@ Solving [LeetCode](https://leetcode.com/) challenges with Swift language includi
 - [X] TDD
 
 #### Study Plans:
-- Dynamic Programming: ✅ Day 2
+- Dynamic Programming: ✅ Day 3
 
 
 [My LeetCode Profile](https://leetcode.com/kamyarst/)
