@@ -4,6 +4,9 @@
 
 Solving [LeetCode](https://leetcode.com/) challenges with Swift language including Unit Tests.
 
+- [X] Github Actions
+- [X] TDD
+
 #### Study Plans:
 - Dynamic Programming: ✅ Day 2
 
